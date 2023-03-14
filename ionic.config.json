@@ -1,0 +1,7 @@
+{
+  "name": "assets_management",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
