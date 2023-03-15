@@ -1,9 +1,150 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>home_view</ion-title>
+    <ion-title><h1>Company Assets</h1></ion-title>
+    <div id="login-details" slot="end">
+      <ion-icon name="person"></ion-icon>
+      <p>Image Shandlani</p>
+      <ion-icon name="power"></ion-icon>
+    </div>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
+  <section id="wrapper-items">
+    <div class="single-items-group active" id="trucks" (click)="openTrucks()">
+      <div class="group-header">
+        <h2>Trucks</h2>
+        <div class="icons-toggle">
+          <ion-icon name="arrow-up" id="opened"></ion-icon>
+          <ion-icon name="arrow-down" id="closed"></ion-icon>
+        </div>
+      </div>
 
+      <div class="group-body">
+        <div class="single-item good">
+          <div class="pic">
+            <img src="../../../assets/car_1.jpg" />
+          </div>
+          <div class="name">Car 1</div>
+          <div class="category">Cars</div>
+          <div class="state-managed">Speed</div>
+          <div class="current">115 k/m</div>
+          <div class="status">Good</div>
+          <div class="btn"><button>View Asset</button></div>
+        </div>
+
+        <div class="single-item danger">
+          <div class="pic">
+            <img src="../../../assets/car_2.jpg" />
+          </div>
+          <div class="name">Car 2</div>
+          <div class="category">Cars</div>
+          <div class="state-managed">Speed</div>
+          <div class="current">140 k/m</div>
+          <div class="status">Danger (Over the limit)</div>
+          <div class="btn">
+            <button>
+              <i>View Asset</i> <ion-icon name="search"></ion-icon>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="single-items-group" id="cars" (click)="openCars()">
+      <div class="group-header">
+        <h2>Cars</h2>
+        <div class="icons-toggle">
+          <ion-icon name="arrow-up" id="opened"></ion-icon>
+          <ion-icon name="arrow-down" id="closed"></ion-icon>
+        </div>
+      </div>
+
+      <div class="group-body">
+        <div class="single-item">
+          <div class="pic">
+            <img src="../../../assets/car_2.jpg" />
+          </div>
+          <div class="name">Car 2</div>
+          <div class="category">Cars</div>
+          <div class="state-managed">Speed</div>
+          <div class="current">140 k/m</div>
+          <div class="status">Danger (Over the limit)</div>
+          <div class="btn"><button>View Asset</button></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="single-items-group" id="refs" (click)="openRefs()">
+      <div class="group-header">
+        <h2>Fridges</h2>
+        <div class="icons-toggle">
+          <ion-icon name="arrow-up" id="opened"></ion-icon>
+          <ion-icon name="arrow-down" id="closed"></ion-icon>
+        </div>
+      </div>
+
+      <div class="group-body">
+        <div class="single-item">
+          <div class="pic">
+            <img src="../../../assets/car_1.jpg" />
+          </div>
+          <div class="name">Car 1</div>
+          <div class="category">Cars</div>
+          <div class="state-managed">Speed</div>
+          <div class="current">115 k/m</div>
+          <div class="status">Good</div>
+          <div class="btn"><button>View Asset</button></div>
+        </div>
+
+        <div class="single-item">
+          <div class="pic">
+            <img src="../../../assets/car_2.jpg" />
+          </div>
+          <div class="name">Car 2</div>
+          <div class="category">Cars</div>
+          <div class="state-managed">Speed</div>
+          <div class="current">140 k/m</div>
+          <div class="status">Danger (Over the limit)</div>
+          <div class="btn"><button>View Asset</button></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="single-items-group" id="gens" (click)="openGens()">
+      <div class="group-header">
+        <h2>Generators</h2>
+        <div class="icons-toggle">
+          <ion-icon name="arrow-up" id="opened"></ion-icon>
+          <ion-icon name="arrow-down" id="closed"></ion-icon>
+        </div>
+      </div>
+
+      <div class="group-body">
+        <div class="single-item">
+          <div class="pic">
+            <img src="../../../assets/car_1.jpg" />
+          </div>
+          <div class="name">Car 1</div>
+          <div class="category">Cars</div>
+          <div class="state-managed">Speed</div>
+          <div class="current">115 k/m</div>
+          <div class="status">Good</div>
+          <div class="btn"><button>View Asset</button></div>
+        </div>
+
+        <div class="single-item">
+          <div class="pic">
+            <img src="../../../assets/car_2.jpg" />
+          </div>
+          <div class="name">Car 2</div>
+          <div class="category">Cars</div>
+          <div class="state-managed">Speed</div>
+          <div class="current">140 k/m</div>
+          <div class="status">Danger (Over the limit)</div>
+          <div class="btn"><button>View Asset</button></div>
+        </div>
+      </div>
+    </div>
+  </section>
 </ion-content>
