@@ -1,11 +1,6 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title><h1>Company Assets</h1></ion-title>
-    <div id="login-details" slot="end">
-      <ion-icon name="person"></ion-icon>
-      <p>Image Shandlani</p>
-      <ion-icon name="power"></ion-icon>
-    </div>
+    <ion-title slot="start"><h1>Company Assets</h1></ion-title>
   </ion-toolbar>
 </ion-header>
 
@@ -21,29 +16,17 @@
       </div>
 
       <div class="group-body">
-        <div class="single-item good">
+        <div class="single-item" *ngFor="let truck of trucks">
           <div class="pic">
-            <img src="../../../assets/car_1.jpg" />
+            <img src="{{truck.image}}" />
           </div>
-          <div class="name">Car 1</div>
-          <div class="category">Cars</div>
-          <div class="state-managed">Speed</div>
-          <div class="current">115 k/m</div>
-          <div class="status">Good</div>
-          <div class="btn"><button>View Asset</button></div>
-        </div>
-
-        <div class="single-item danger">
-          <div class="pic">
-            <img src="../../../assets/car_2.jpg" />
-          </div>
-          <div class="name">Car 2</div>
-          <div class="category">Cars</div>
-          <div class="state-managed">Speed</div>
-          <div class="current">140 k/m</div>
-          <div class="status">Danger (Over the limit)</div>
+          <div class="name">{{truck.id}}</div>
+          <div class="category">{{truck.category}}</div>
+          <div class="state-managed">S{{truck.measure}}</div>
+          <div class="current">{{truck.measureVal}}</div>
+          <div class="status">{{truck.status}}</div>
           <div class="btn">
-            <button>
+            <button (click)="view(truck.id)">
               <i>View Asset</i> <ion-icon name="search"></ion-icon>
             </button>
           </div>
@@ -61,16 +44,20 @@
       </div>
 
       <div class="group-body">
-        <div class="single-item">
+        <div class="single-item" *ngFor="let car of cars">
           <div class="pic">
-            <img src="../../../assets/car_2.jpg" />
+            <img src="{{car.image}}" />
           </div>
-          <div class="name">Car 2</div>
-          <div class="category">Cars</div>
-          <div class="state-managed">Speed</div>
-          <div class="current">140 k/m</div>
-          <div class="status">Danger (Over the limit)</div>
-          <div class="btn"><button>View Asset</button></div>
+          <div class="name">{{car.id}}</div>
+          <div class="category">{{car.category}}</div>
+          <div class="state-managed">S{{car.measure}}</div>
+          <div class="current">{{car.measureVal}}</div>
+          <div class="status">{{car.status}}</div>
+          <div class="btn">
+            <button (click)="view(car.id)">
+              <i>View Asset</i> <ion-icon name="search"></ion-icon>
+            </button>
+          </div>
         </div>
       </div>
     </div>
@@ -85,28 +72,20 @@
       </div>
 
       <div class="group-body">
-        <div class="single-item">
+        <div class="single-item" *ngFor="let r of fridges">
           <div class="pic">
-            <img src="../../../assets/car_1.jpg" />
+            <img src="{{r.image}}" />
           </div>
-          <div class="name">Car 1</div>
-          <div class="category">Cars</div>
-          <div class="state-managed">Speed</div>
-          <div class="current">115 k/m</div>
-          <div class="status">Good</div>
-          <div class="btn"><button>View Asset</button></div>
-        </div>
-
-        <div class="single-item">
-          <div class="pic">
-            <img src="../../../assets/car_2.jpg" />
+          <div class="name">{{r.id}}</div>
+          <div class="category">{{r.category}}</div>
+          <div class="state-managed">S{{r.measure}}</div>
+          <div class="current">{{r.measureVal}}</div>
+          <div class="status">{{r.status}}</div>
+          <div class="btn">
+            <button (click)="view(r.id)">
+              <i>View Asset</i> <ion-icon name="search"></ion-icon>
+            </button>
           </div>
-          <div class="name">Car 2</div>
-          <div class="category">Cars</div>
-          <div class="state-managed">Speed</div>
-          <div class="current">140 k/m</div>
-          <div class="status">Danger (Over the limit)</div>
-          <div class="btn"><button>View Asset</button></div>
         </div>
       </div>
     </div>
@@ -121,28 +100,20 @@
       </div>
 
       <div class="group-body">
-        <div class="single-item">
+        <div class="single-item" *ngFor="let g of gens">
           <div class="pic">
-            <img src="../../../assets/car_1.jpg" />
+            <img src="{{g.image}}" />
           </div>
-          <div class="name">Car 1</div>
-          <div class="category">Cars</div>
-          <div class="state-managed">Speed</div>
-          <div class="current">115 k/m</div>
-          <div class="status">Good</div>
-          <div class="btn"><button>View Asset</button></div>
-        </div>
-
-        <div class="single-item">
-          <div class="pic">
-            <img src="../../../assets/car_2.jpg" />
+          <div class="name">{{g.id}}</div>
+          <div class="category">{{g.category}}</div>
+          <div class="state-managed">S{{g.measure}}</div>
+          <div class="current">{{g.measureVal}}</div>
+          <div class="status">{{g.status}}</div>
+          <div class="btn">
+            <button (click)="view(g.id)">
+              <i>View Asset</i> <ion-icon name="search"></ion-icon>
+            </button>
           </div>
-          <div class="name">Car 2</div>
-          <div class="category">Cars</div>
-          <div class="state-managed">Speed</div>
-          <div class="current">140 k/m</div>
-          <div class="status">Danger (Over the limit)</div>
-          <div class="btn"><button>View Asset</button></div>
         </div>
       </div>
     </div>

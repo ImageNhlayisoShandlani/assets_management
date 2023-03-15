@@ -25,7 +25,7 @@ const routes: Routes = [
       ),
   },
   {
-    path: 'asset-view',
+    path: 'asset-view/:id',
     loadChildren: () =>
       import('./pages/asset-view/asset-view.module').then(
         (m) => m.AssetViewPageModule

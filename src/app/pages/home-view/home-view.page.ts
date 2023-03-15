@@ -1,4 +1,10 @@
 import { Component, OnInit } from '@angular/core';
+import { Route, Router } from '@angular/router';
+import { Asset } from 'src/app/models/assets';
+import { CarsService } from 'src/app/services/cars/cars.service';
+import { FridgesService } from 'src/app/services/fridges/fridges.service';
+import { GeneratorsService } from 'src/app/services/generators/generators.service';
+import { TrucksService } from 'src/app/services/trucks/trucks.service';
 
 @Component({
   selector: 'app-home-view',
@@ -6,10 +12,28 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home-view.page.scss'],
 })
 export class HomeViewPage implements OnInit {
-  constructor() {}
+  cars: Asset[] = [];
+  trucks: Asset[] = [];
+  gens: Asset[] = [];
+  fridges: Asset[] = [];
+  constructor(
+    private carsServ: CarsService,
+    private trucksServ: TrucksService,
+    private gensServ: GeneratorsService,
+    private fSer: FridgesService,
+    private router: Router
+  ) {}
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.cars = this.carsServ.getCars();
+    this.trucks = this.trucksServ.getTrucks();
+    this.gens = this.gensServ.getGens();
+    this.fridges = this.fSer.getFridges();
+  }
 
+  view(i: number) {
+    this.router.navigate(['asset-view', i]);
+  }
   openCars() {
     var c = document.getElementById('cars') as HTMLElement;
     var t = document.getElementById('trucks') as HTMLElement;

@@ -72,3 +72,29 @@ ion-content {
     }
   }
 }
+
+/******************* Smartphone media queries portrait view *****************************************/
+@media (min-width: 350px) and (max-width: 500px) and (orientation: portrait) {
+  #wrapper-login {
+    width: 97% !important;
+  }
+
+  ion-title {
+    margin-bottom: 1rem;
+    width: 100%;
+
+    h1 {
+      font-size: 14px !important;
+    }
+  }
+}
+
+@media (min-width: 600px) and (max-width: 930px) and (max-height: 430px) and (orientation: landscape) {
+  ion-content {
+    height: 175vh !important;
+
+    #main-login {
+      height: 150% !important;
+    }
+  }
+}
